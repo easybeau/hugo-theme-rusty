@@ -1,0 +1,11 @@
+{{ define "main" }}
+<section id="content">
+  <div class="container">
+    <h5><a href="/">{{ .Site.Title }}</a></h5>
+    <h1>{{ .Title }}</h1>
+    <p class="date">{{ .Date.Format "Jan 2, 2006" }} | Reading time: {{ .ReadingTime }} mins</p>
+    {{ .Content }}
+    <p><a href="/{{.Type}}"><< Back to {{ humanize .Type}}</a></p>
+  </div>
+</section>
+{{ end }}

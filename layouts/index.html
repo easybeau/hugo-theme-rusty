@@ -1,0 +1,24 @@
+{{ define "main" }}
+<header>
+    <div class="container">
+        <h1>{{.Site.Title}}</h1>
+        <p>{{.Site.Description}}</p>
+    </div>
+</header>
+
+<section id="content">
+    {{ range (.Pages.GroupBy "Section").Reverse }}
+    <div class="container">
+        <div class="type">
+            <h2>{{.Key | upper}}</h2>
+            {{ range first 3 .Pages }}
+            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            <p class="date">{{ .Date.Format "Jan 2, 2006" }}</p>
+            <p>{{ .Description }}</p>
+            {{ end }}
+            <p class="read-more"><a href="/{{.Key}}">More >></a></p>
+        </div>
+    </div>
+    {{ end }}
+</section>
+{{ end }}
