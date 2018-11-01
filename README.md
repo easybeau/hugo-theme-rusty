@@ -2,6 +2,10 @@
 
 A theme for [Hugo](https://gohugo.io).
 
+Sample site:
+
+![theme screenshot](https://raw.githubusercontent.com/cecyc/hugo-theme-rusty/master/images/screenshot.png)
+
 ## Install
 
 - [Install Hugo](https://gohugo.io/getting-started/quick-start/)
