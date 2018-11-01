@@ -2,7 +2,11 @@
 <header>
     <div class="container">
         <h1>{{.Site.Title}}</h1>
-        <p>{{.Site.Description}}</p>
+        {{if (isset .Site.Params "description")}}
+            <p>{{.Site.Params.Description}}</p>
+        {{else}}
+            <p>Welcome to my blog!</p>
+        {{end}}
     </div>
 </header>
 
