@@ -5,7 +5,10 @@
     <h1>{{ .Title }}</h1>
     <p class="date">{{ .Date.Format "Jan 2, 2006" }} | Reading time: {{ .ReadingTime }} mins</p>
     {{ .Content }}
-    <p><a href="/{{.Type}}"><< Back to {{ humanize .Type}}</a></p>
+    {{ if ne .Type "page"}}
+      <p><a href="/{{.Type}}"><< Back to {{ humanize .Type}}</a></p>
+    {{ end }}
+
   </div>
 </section>
 {{ end }}
